@@ -1,20 +1,19 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function MainLayout() {
   return (
     <div>
-      <nav className="flex gap-6 p-4 bg-gray-100">
-        <Link to="/">Dashboard</Link>
-        <Link to="/applications">Applications</Link>
-        <Link to="/add-application">Add Application</Link>
-        <Link to="/explore-jobs">Explore Jobs</Link>
-      </nav>
+      <Navbar />
 
       <main className="p-6">
         <Outlet />
       </main>
+
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default MainLayout
+export default MainLayout;
